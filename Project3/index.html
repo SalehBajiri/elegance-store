@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegance | متجر إيليجانس</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fa-solid fa-store"></i>
+          <span>إيليجانس <br /><small>Elegance</small></span>
+        </div>
+
+        <div class="search-box">
+          <input
+            type="text"
+            placeholder="ابحث عن المنتجات | Search products..."
+          />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="nav-actions">
+          <button class="lang-switch">EN / عربي</button>
+
+          <a href="login.html" class="icon-link" id="user-nav-link">
+            <i class="fa-regular fa-user" id="user-nav-icon"></i>
+            <div class="link-text">
+              <span id="user-nav-name">دخول</span
+              ><small id="user-nav-sub">Login</small>
+            </div>
+          </a>
+          <a href="index.html" class="icon-link">
+            <i class="fa-solid fa-house"></i>
+            <div class="link-text">
+              <span>الرئيسية</span><small>Home</small>
+            </div>
+          </a>
+          <a href="cart.html" class="icon-link cart-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-badge">0</span>
+            <div class="link-text">
+              <span>السلة</span>
+              <small>Cart</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>مزيج من الفخامة والتقنية</h1>
+          <h2>A Blend of Luxury & Tech</h2>
+          <p>
+            اكتشف أحدث الأجهزة الذكية بتصاميم عصرية تناسب أسلوب حياتك. <br />
+            Discover the latest smart devices with modern designs.
+          </p>
+          <a href="products.html" class="btn-primary">تسوق الآن | Shop Now</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="products" class="container">
+      <div class="section-title">
+        <h2>وصل حديثاً | New Arrivals</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="badge discount">-20%</div>
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+              alt="Headphones"
+            />
+          </div>
+          <div class="product-info">
+            <p class="category">صوتيات | Audio</p>
+            <h3 class="title">سماعات رأس لاسلكية ممتازة</h3>
+            <h3 class="title-en">Premium Wireless Headphones</h3>
+            <div class="price-row">
+              <span class="price">250 ر.س</span>
+              <span class="old-price">320 ر.س</span>
+            </div>
+            <button
+              class="add-btn"
+              data-id="p1"
+              data-name="سماعات رأس لاسلكية"
+              data-price="250"
+            >
+              <i class="fa-solid fa-plus"></i> أضف للسلة
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge new">جديد | New</div>
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&q=80"
+              alt="Smart Watch"
+            />
+          </div>
+          <div class="product-info">
+            <p class="category">ساعات | Watches</p>
+            <h3 class="title">ساعة ذكية رياضية الجيل الثامن</h3>
+            <h3 class="title-en">Sport Smartwatch Series 8</h3>
+            <div class="price-row">
+              <span class="price">450 ر.س</span>
+            </div>
+            <button
+              class="add-btn"
+              data-id="p2"
+              data-name="ساعة ذكية رياضية"
+              data-price="450"
+            >
+              <i class="fa-solid fa-plus"></i> أضف للسلة
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80"
+              alt="Camera"
+            />
+          </div>
+          <div class="product-info">
+            <p class="category">تصوير | Photography</p>
+            <h3 class="title">كاميرا رقمية احترافية 4K</h3>
+            <h3 class="title-en">Professional 4K Digital Camera</h3>
+            <div class="price-row">
+              <span class="price">1200 ر.س</span>
+            </div>
+            <button
+              class="add-btn"
+              data-id="p3"
+              data-name="كاميرا احترافية 4K"
+              data-price="1200"
+            >
+              <i class="fa-solid fa-plus"></i> أضف للسلة
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="badge discount">-15%</div>
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=80"
+              alt="Laptop"
+            />
+          </div>
+          <div class="product-info">
+            <p class="category">حواسيب | Computers</p>
+            <h3 class="title">حاسوب محمول فائق النحافة</h3>
+            <h3 class="title-en">Ultra-Slim Laptop</h3>
+            <div class="price-row">
+              <span class="price">3500 ر.س</span>
+              <span class="old-price">4100 ر.س</span>
+            </div>
+            <button
+              class="add-btn"
+              data-id="p4"
+              data-name="حاسوب محمول"
+              data-price="3500"
+            >
+              <i class="fa-solid fa-plus"></i> أضف للسلة
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>إيليجانس</h3>
+          <p>
+            وجهتك الأولى للتسوق الذكي. نقدم لك أحدث التقنيات وأفضل المنتجات
+            بأسعار تنافسية.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="cart.html">السلة</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>تواصل معنا</h3>
+          <ul>
+            <li><i class="fa-solid fa-envelope"></i> support@elegance.com</li>
+            <li><i class="fa-solid fa-phone"></i> +967 770 000 000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 متجر إيليجانس. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+    <dialog id="elegance-dialog" class="elegance-dialog">
+        <div class="dialog-content">
+            <div class="dialog-icon">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+            <h3 id="dialog-message">رسالة التنبيه تظهر هنا</h3>
+            <button id="dialog-close-btn" class="checkout-btn" style="width: 100%; margin-top: 20px;">حسناً</button>
+        </div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

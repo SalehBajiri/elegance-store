@@ -1,0 +1,748 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600&display=swap");
+
+:root {
+  --primary: #5ec7b4; /* لون سلة المريح */
+  --primary-dark: #4ba695;
+  --dark-bg: #111111; /* فخامة التصميم الإنجليزي */
+  --light-bg: #f8f9fa;
+  --text-main: #222222;
+  --text-muted: #777777;
+  --danger: #ff4757;
+  --border: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Tajawal", "Inter", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-main);
+}
+
+/* شريط التنقل */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.logo span {
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.logo small {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.search-box {
+  display: flex;
+  width: 40%;
+  background-color: var(--light-bg);
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(94, 199, 180, 0.2);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 20px;
+  outline: none;
+}
+
+.search-box button {
+  border: none;
+  background: transparent;
+  padding: 0 20px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.lang-switch {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.lang-switch:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: color 0.3s;
+}
+
+.icon-link i {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.icon-link:hover {
+  color: var(--primary);
+}
+
+.link-text span {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.link-text small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cart-link {
+  position: relative;
+}
+
+#cart-badge {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  background-color: var(--danger);
+  color: white;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* البانر الفخم بخلفية حقيقية */
+.hero-section {
+  background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.75); /* طبقة سوداء شفافة لتوضيح النص */
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.hero-content h2 {
+  font-size: 24px;
+  font-family: "Inter";
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+.hero-content p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #dddddd;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* المنتجات */
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  color: var(--dark-bg);
+}
+
+.title-line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.badge.discount {
+  background-color: var(--danger);
+}
+.badge.new {
+  background-color: var(--primary);
+}
+
+.product-img {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.category {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 16px;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+.title-en {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: "Inter";
+  font-weight: 400;
+  margin-bottom: 15px;
+  height: 20px;
+}
+
+.price-row {
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark-bg);
+}
+
+.old-price {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-btn:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* تنسيقات صفحة السلة */
+.cart-page {
+  margin-top: 40px;
+}
+.cart-title {
+  margin-bottom: 30px;
+  color: var(--dark-bg);
+  font-size: 28px;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.cart-items {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* تصميم صف المنتج الواحد في السلة */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.item-info h4 {
+  color: var(--text-main);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.item-info p {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* حاوية أزرار التحكم بالكمية */
+.item-controls {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 5px 15px;
+    gap: 15px;
+}
+
+/* أزرار الزيادة والنقصان */
+.increase-btn, .decrease-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text-muted);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.increase-btn:hover, .decrease-btn:hover {
+    background-color: #e0e0e0;
+    color: var(--text-main);
+}
+
+/* رقم الكمية في المنتصف */
+.qty-display {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-main);
+    min-width: 20px;
+    text-align: center;
+}
+
+/* زر الحذف */
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--danger);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #ddd; /* خط فاصل بين الكمية وسلة المهملات */
+}
+
+.remove-btn:hover {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* ملخص الطلب */
+.cart-summary {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 100px;
+}
+.cart-summary h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 2px solid var(--light-bg);
+  padding-bottom: 10px;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+.summary-row.total {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--dark-bg);
+  margin-top: 20px;
+  border-top: 2px solid var(--light-bg);
+  padding-top: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--dark-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.checkout-btn:hover {
+  background-color: var(--primary);
+  
+}
+
+/* تنسيقات صفحة الدفع */
+.checkout-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+/* تنسيقات الفوتر */
+.footer {
+    background-color: var(--dark-bg);
+    color: #fff;
+    padding: 50px 0 0 0;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px 40px;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.footer-col p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary);
+    padding-right: 8px;
+}
+
+.footer-col ul li i {
+    margin-left: 10px;
+    color: var(--primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #888;
+    font-size: 14px;
+}
+
+/* تنسيقات صفحة الدخول/التسجيل المضبوطة */
+.auth-page { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 70vh; 
+    margin-top: 40px; 
+}
+
+.auth-box { 
+    background: #fff; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+    width: 100%; 
+    max-width: 450px; 
+    margin: 0 auto; /* هذا ما كان ينقص لتوسيط البطاقة */
+}
+
+/* أزرار التبديل */
+.auth-toggle { 
+    display: flex; 
+    border-bottom: 2px solid var(--light-bg); 
+    margin-bottom: 30px; 
+}
+
+.auth-toggle button { 
+    flex: 1; 
+    background: none; 
+    border: none; 
+    padding: 15px 10px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: var(--text-muted); 
+    cursor: pointer; 
+    border-bottom: 2px solid transparent; 
+    transition: 0.3s; 
+    margin-bottom: -2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.auth-toggle button small { font-size: 12px; font-weight: normal; }
+.auth-toggle button.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* إخفاء وإظهار الفورمات */
+.auth-form { display: none; }
+.auth-form.active { display: block; animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* تنسيق الحقول لتكون أنيقة وليست ممتدة لكامل الشاشة */
+.form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--dark-bg); }
+.form-group input { 
+    width: 100%; 
+    padding: 12px 15px; 
+    border: 1px solid var(--border); 
+    border-radius: 8px; 
+    font-size: 15px; 
+    margin-bottom: 20px; 
+    background-color: var(--light-bg); 
+    transition: 0.3s; 
+    box-sizing: border-box; /* تمنع خروج الانبوت عن مساره */
+}
+.form-group input:focus { 
+    border-color: var(--primary); 
+    background-color: #fff; 
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.1); 
+}
+
+/* تحويل النافذة إلى إشعار جانبي (Toast) */
+.elegance-dialog {
+    margin: 0;
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* سيظهر في الزاوية السفلية اليمنى */
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    max-width: 350px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 9999;
+}
+
+/* إزالة الخلفية الضبابية لأننا لا نريد إيقاف عمل الصفحة */
+.elegance-dialog::backdrop {
+    background: transparent;
+    backdrop-filter: none;
+}
+
+.dialog-content {
+    padding: 20px;
+    text-align: right; /* محاذاة لليمين */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dialog-icon {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+#dialog-message {
+    color: var(--dark-bg);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#dialog-close-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    align-self: flex-end; /* وضع الزر في اليسار */
+    width: auto;
+    margin: 0;
+}
+
+/* أنيميشن الدخول من الجنب */
+.elegance-dialog[open] {
+    animation: slideInRight 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
